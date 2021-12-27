@@ -1,0 +1,150 @@
+body{
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto Slab', serif;
+
+}
+*{
+    box-sizing: border-box;
+}
+p,li,ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.container{
+    /* width: 100%; */
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+.hide{
+    display: none;
+    width: 0;
+    height: 0;
+    opacity: 0;
+}
+/* Heder */
+.header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 50;
+}
+.home{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+.header.fixed{
+    position: fixed;
+    background-color: tomato;
+    /* padding: 10px 0; */
+}
+.header::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    z-index: 100;
+}
+.header-inner{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 0;
+}
+
+.header.fixed .header-inner{
+    padding: 10px 0;
+}
+
+.header-logo {
+    /* width: 100px; */
+    position: relative;
+    position: relative;
+    z-index: 100;
+}
+.header-logo img{
+    /* max-width: 100%;
+    display: block; */
+}
+.nav-list{
+    display: flex;
+    max-width: 100%;
+    position: relative;
+    z-index: 100;
+}
+.nav-list li{
+    list-style: none;
+}
+.nav-list .nav-link,
+.nav-link a {
+    text-decoration: none;
+    color: #fff;
+    margin-left: 17px;
+    margin-right: 17px;
+    cursor: pointer;
+}
+.nav-link:last-child{
+    margin-right: 0;
+}
+
+.header-burger{
+    display: none;
+}
+/* Main */
+.main{
+    
+    background: url(img/bg.jpg) center no-repeat;
+    background-size: cover;
+}
+.main-inner{
+    position: relative;
+    z-index: 5;
+    
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main-rgba{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, .45);
+}
+.main-titles{
+    margin-top: 50px;
+    text-align: center;
+    font-family: 'Roboto Slab', serif;
+    color: #fff;
+    line-height: 1.4;
+}
+.main-title{
+    font-size: 48px;
+}
+.main-subtitle{
+    font-size: 20px;
+    margin-bottom: 54px;
+}
+.main-button{
+    background-color: transparent;
+    border: 2px solid #fff;
+    padding: 14px 33px;
+    color: #fff;
+    text-transform: uppercase;
+    cursor: pointer;
+}
